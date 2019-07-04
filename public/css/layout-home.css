@@ -1,0 +1,169 @@
+.brand-canvas__wrapper {
+  background: white; }
+
+.home-grid__wrapper {
+  background: url("/assets/images/home-promos.png") no-repeat 522px top;
+  float: left;
+  width: 738px; }
+
+.home__action-menu {
+  background: #fff;
+  border: 1px solid #dfe2e5;
+  float: left;
+  margin-left: -276px;
+  margin-top: 35px;
+  position: relative;
+  width: 246px;
+  z-index: 1; }
+
+.home__action-menu__title {
+  background: #00b092;
+  color: #fff;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  margin: -1px -1px 0;
+  padding: 10px;
+  text-transform: uppercase; }
+
+.home__action-menu__list.-secondary {
+  background: #f2f2f2;
+  border-top: 1px solid #dfe2e5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: -1px; }
+.home__action-menu__list li {
+  padding: 0 15px; }
+.home__action-menu__list a {
+  border-bottom: 1px solid #dfe2e5;
+  display: block;
+  padding: 13px 0; }
+  .home__action-menu__list a:focus, .home__action-menu__list a:hover {
+    color: #00b092; }
+.home__action-menu__list [class^="icon-"], .home__action-menu__list [class*=" icon-"] {
+  color: inherit;
+  display: inline-block;
+  font-size: 22px;
+  margin-right: 10px;
+  margin-top: -3px;
+  vertical-align: middle; }
+
+.home__action-menu__toggle {
+  background: transparent;
+  border: 0;
+  color: #999;
+  display: none;
+  font-size: 12px;
+  font-size: 0.75rem;
+  height: 47px;
+  line-height: 47px;
+  padding: 0 15px;
+  text-align: left;
+  width: 100%; }
+  .home__action-menu__toggle[aria-expanded] {
+    display: block; }
+  .home__action-menu__toggle[aria-expanded="false"] .less-label {
+    display: none; }
+  .home__action-menu__toggle[aria-expanded="true"] {
+    background: #f2f2f2; }
+    .home__action-menu__toggle[aria-expanded="true"] .more-label {
+      display: none; }
+
+h2.news_headline {
+	font-family: Georgia;
+	font-size: 24px;
+}
+
+img.news_image {
+	float: left;
+	padding-right: 10px;
+}
+
+.home-news {
+  padding-top: 30px; }
+
+.home-news__list {
+  border-bottom: 1px solid #dfe2e5;
+  width: 100%; }
+
+  .home-news__list li {
+    border-top: 1px solid #dfe2e5;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5714285714;
+    padding: 15px 0; }
+    .home-news__list li.featured {
+      border-top: 0;
+      float: left;
+      /*margin-bottom: 25px;*/
+      width: 216px; }
+      .home-news__list li.featured + .featured {
+        float: right; }
+        .home-news__list li.featured + .featured + li {
+          border-top-width: 2px;
+          clear: left; }
+      .home-news__list li.featured img {
+        display: block; }
+      .home-news__list li.featured h3 {
+        font-weight: 600;
+        margin: 1em 0 .2em; }
+  .home-news__list li:not(.featured) {
+    clear:both;
+  }
+
+  .home-news__list li:not(.featured) p {
+    overflow: hidden;
+  }
+
+ .no-border-top {
+ 	border-top: none !important;
+ }
+
+.home-promos {
+  padding: 30px 20px; }
+
+.home-promos__list {
+  line-height: 1.25;
+  text-align: center; }
+
+.home-promos__item {
+  border-top: 1px solid #dfe2e5;
+  padding-top: 100%;
+  position: relative; }
+  .home-promos__item:first-child {
+    border: 0; }
+  .home-promos__item a {
+    display: block; }
+  .home-promos__item img {
+    display: block;
+    margin: auto auto 1em; }
+  .home-promos__item .button {
+    margin-top: 1em; }
+  .home-promos__item .front, .home-promos__item .back {
+    bottom: 0;
+    display: table;
+    left: 0;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: opacity .5s;
+            transition: opacity .5s; }
+  .home-promos__item .front {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    font-size: 1rem; }
+  .home-promos__item .back {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    opacity: 0; }
+    .no-opacity .home-promos__item .back {
+      display: none; }
+  .home-promos__item:hover .front {
+    opacity: 0; }
+    .no-opacity .home-promos__item:hover .front {
+      display: none; }
+  .home-promos__item:hover .back {
+    opacity: 1; }
+    .no-opacity .home-promos__item:hover .back {
+      display: table; }

@@ -1,0 +1,128 @@
+body {
+  margin-top: 0.5rem;
+  padding-bottom: 5px;
+  background-color:  white;
+}
+
+.logo-img{
+  width:80px;
+  height: 80px;
+  margin-top: -1rem;
+  border-right: 1rem;
+}
+
+nav{
+  background-color: whitesmoke;
+}
+
+.navbar-inverse .navbar-toggler{
+  color: grey
+}
+
+.navbar-brand{
+  margin-left: 1rem
+  font-size: 2rem;
+}
+
+.navbar-brand > h1 {
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  padding-left: 1rem
+}
+
+.navbar-inverse .navbar-nav .active > .nav-link{
+  color: black;
+  font-size: 1rem;
+}
+
+.navbar-inverse .navbar-nav .nav-link{
+  color: black;
+  font-size: 1rem;
+}
+
+.navbar-inverse .navbar-nav .nav-link.disabled{
+  color: black;
+  font-size: 1rem;
+}
+
+#myCarousel{
+  height: 80vh;
+  width: 100%;
+}
+
+div > .first{
+  background-image: url(images/hospital.jpg);
+  background-size: cover
+}
+.second-slide{
+  background-image: url(images/path.jpg);
+}
+div > .thrid-slide{
+  background-image: url(images/inside.jpg);
+}
+
+div > .carousel-caption{
+  opacity: 1;
+}
+
+
+
+
+.middle{
+  height: 70vh;
+  width: 100%;
+}
+
+.bio{
+  background-color: ;
+  border-radius: 1% 1% 1% 1%;
+}
+
+.eklogo{
+  text-align: center;
+}
+
+.eklogo > img{
+  height: 200px;
+  width: 200px;
+}
+
+.head{
+  text-align: center;
+  font-size: 2rem;
+  color: yellowgreen;
+}
+
+.header{
+  font-weight: bold;
+  color: white;
+}
+
+.bd-list{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.description{
+  
+}
+
+
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: auto;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: black;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footed {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}

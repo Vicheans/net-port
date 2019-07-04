@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>EKSUTH PAYSLIP</title>
+ <meta charset="utf-8">
+ <link rel="icon" href="images/eksuthlogo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<script src="jss/jquery.js"></script>
+<script src="jss/bootstrap.min.js"></script>
+ <script type="text/javascript">
+$(document).ready(function(){
+$("#myModal").modal('show');
+});
+</script>
+</head>
+
+<body style="background: url(images/eksuthlogo2.png);background-size: ; background-repeat: no-repeat;background-position: absolute">
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6" style="top: 15rem; font-size: 1.3rem; font-weight: bold; font-family: cursive">Ekiti State residents have access to good healthcare delivery following a gradual but thorough transformation of the major hospital in Ado-Ekiti, the state capital from a state hospital that had just one consultant to a teaching hospital that now boasts of many consultants in major fields of medicine.</div>
+</div>
+<div id="myModal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title"><img src="images/eksuthlogo2.png" style="height: 40px; width: 40px">  Ooops! Page Not Found 😓 </h4>
+<button type="button" class="btn-lg primary close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<div class="modal-body" style="background: #eee">
+<p style="font-weight: bold"><span style="font-family: cursive; color: red">ERROR 404!</span> Sorry, the page you requested for is not available or we could not locate your request, do check your request again or contact<span style="font-family: cursive;"> Developer!</span></p>
+<form>
+<div class="form-group">
+<input type="hidden" class="form-control" placeholder="Name">
+</div>
+<div class="form-group">
+<input type="hidden" class="form-control" placeholder="Email Address">
+</div>
+<span style="font-family: sans-serif;">You will be redirected in 10 seconds...</span>
+<button type="submit" class="btn btn-danger" style="float: right">Home</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script src="jquery.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="bootstrap.js"></script> 
+
+  <script>
+  setTimeout(function () {
+     // after 2 seconds
+     window.location = "/";
+  }, 10000)
+</script>
+ </body>
+</html>

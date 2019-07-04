@@ -1,0 +1,407 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+.logo-img{
+  width:80px;
+  height: 80px;
+  margin-top: -1rem;
+  border-right: 1rem;
+}
+
+.navbar-inverse .navbar-toggler{
+  color: grey
+}
+.navbar-brand{
+  margin-left: 1rem
+  font-size: 2rem;
+}
+
+.navbar-brand > h1 {
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  padding-left: 1rem
+}
+
+.navbar-inverse .navbar-nav .active > .nav-link{
+  color: black;
+  font-size: 1rem;
+}
+
+.navbar-inverse .navbar-nav .nav-link{
+  color: black;
+  font-size: 1rem;
+}
+
+.navbar-inverse .navbar-nav .nav-link.disabled{
+  color: black;
+  font-size: 1rem;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 3rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.img > img {
+  position: absolute;
+  height: 32rem;
+  width: auto;
+}
+.img{
+  z-index: 2;
+}
+
+
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 3rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.img > img {
+  position: absolute;
+  height: 32rem;
+  width: auto;
+}
+.img{
+  text-align: center;
+  z-index: 2;
+  margin-right: 50%;
+}
+
+.text-left{
+  background-color: black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.one-img {
+  background: url(images/path.jpg); 
+  background-size: cover;
+  filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+.two-img {
+background: url(images/docs.jpg); 
+background-size: cover;
+filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+.three-img {
+ background: url(images/baby2.jpg); 
+ background-size: cover;
+ filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 3rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.img > img {
+  position: absolute;
+  height: 32rem;
+  width: auto;
+}
+.img{
+  text-align: center;
+  z-index: 2;
+  margin-right: 50%;
+}
+
+
+.one-img {
+  background: url(images/path.jpg); background-size: cover;
+  filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+.two-img {
+background: url(images/docs.jpg); background-size: cover;
+filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+.three-img {
+ background: url(images/baby2.jpg); background-size: cover;
+ filter: blur(8px);
+  position: absolute;
+  height: 32rem;
+  width: 100%;
+}
+
+}
+
+
+/*
+ * Globals
+ */
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  margin-bottom: 3rem;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.nav-link {
+  position: relative;
+  padding: 1rem;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Active state gets a caret at the bottom */
+.nav-link.active {
+  color: #fff;
+}
+.nav-link.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -.3rem;
+  vertical-align: middle;
+  content: "";
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid;
+  border-left: .3rem solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 1rem;
+  /*margin: 0 -1rem 1rem;*/
+}
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: .25rem;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}

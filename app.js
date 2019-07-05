@@ -9,6 +9,9 @@ const ejs = require("ejs");
 const router = require("router");
 const Nexmo = require("nexmo");
 var nodemailer = require("nodemailer");
+var smtpTransport = require('nodemailer-smtp-transport');
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(parser.urlencoded({extended: true}));
@@ -19,14 +22,13 @@ const nexmo = new Nexmo({
  apiSecret: "XSaGLjVCMiibi07M"
 });
 
-let port = process.env.PORT;
-if(port == null || port == ""){
-  port = 5000;
-}
 
 ////////////////SMS TEST APP ENDS
 var style = " ";
 var response = " ";
+
+
+
 //RENDERING HOME
 app.get("/", function(req, res){
 	res.redirect("/home.php");
@@ -57,21 +59,25 @@ console.log(name + "  " + email + " " + message);
 //   nexmo.message.sendSms(sender, to, text);
 // //WORKING ON THE SMS RETURN
 ///////////////////////////////////////
-var transporter = nodemailer.createTransport({
-  service: 'smtp.gmail.com',
-  port: port,
-  secure: true,
+
+
+var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
  auth: {
     user: 'christianovik009@gmail.com',
     pass: 'Olateju2018'
   }
-})
+}));
+
+
 
 var mailOptions = {
-  from: 'christianovik009@gmail.com',
-  to: 'VictorOlateju8@gmail.com',
-  subject: 'We are here again',
-  text: 'That was breathtakingly easy! Victor, you are Great'
+  to: email,
+  from : 'Olateju Victor Daniel',
+  subject: 'Thank you',
+  text: 'Olateju Victor Daniel',
+  html: "<h1>Olateju Victor Daniel</h1> <p>Thank you for leaving message, i will try to give a response as soon as possible. Thanks</p>" + 
+  "\n <a href='http://Olateju-victor-daniel.tk'>Olateju-victor-daniel.tk</a>"
 }
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -121,7 +127,8 @@ app.get("/about.php", function(req, res){
 });
 
 app.get("/services.php", function(req, res){
-	res.sendFile(__dirname + "/views/services.html");
+	//console.log(req.ipInfo);
+	res.render("expired")
 });
 
 app.get("/news.php", function(req, res){
@@ -181,6 +188,12 @@ app.use(function(err, req, res, next){
 // if(port == null || port == ""){
 //   port = 5000;
 // }
+
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 5000;
+}
+
 
 app.listen(port, function() {
   console.log("5000: Server started on port successfully.");

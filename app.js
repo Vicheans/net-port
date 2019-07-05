@@ -98,7 +98,7 @@ var transported = nodemailer.createTransport(smtpTransport({
 
 
 
-var mailOptions = {
+var mailOption = {
   to: "christianovik009@gmail.com",
   from : 'Olateju Victor Daniel',
   subject: 'Thank you',
@@ -106,7 +106,7 @@ var mailOptions = {
   html: "<h1>Olateju Victor Daniel</h1> <p>You recieved a mail</p>"
 }
 
-transported.sendMail(mailOptions, function(error, info){
+transported.sendMail(mailOption, function(error, info){
   if (error) {
     console.log(error);
   } else {

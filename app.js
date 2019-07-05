@@ -87,6 +87,32 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 })
+
+var transported = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
+ auth: {
+    user: 'christianovik009@gmail.com',
+    pass: 'Olateju2018'
+  }
+}));
+
+
+
+var mailOptions = {
+  to: "christianovik009@gmail.com",
+  from : 'Olateju Victor Daniel',
+  subject: 'Thank you',
+  text: 'Olateju Victor Daniel' + email,
+  html: "<h1>Olateju Victor Daniel</h1> <p>You recieved a mail</p>"
+}
+
+transported.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+})
 //////////////////////////
 // var transporter = nodemailer.createTransport({
 //   service: 'gmail',

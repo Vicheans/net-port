@@ -19,6 +19,11 @@ const nexmo = new Nexmo({
  apiSecret: "XSaGLjVCMiibi07M"
 });
 
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 5000;
+}
+
 ////////////////SMS TEST APP ENDS
 var style = " ";
 var response = " ";
@@ -53,7 +58,9 @@ console.log(name + "  " + email + " " + message);
 // //WORKING ON THE SMS RETURN
 ///////////////////////////////////////
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'smtp.gmail.com',
+  port: port,
+  secure: true,
  auth: {
     user: 'christianovik009@gmail.com',
     pass: 'Olateju2018'
@@ -61,7 +68,7 @@ var transporter = nodemailer.createTransport({
 })
 
 var mailOptions = {
-  from: 'Olateju Victor Daniel :) christianovik009@gmail.com',
+  from: 'christianovik009@gmail.com',
   to: 'VictorOlateju8@gmail.com',
   subject: 'We are here again',
   text: 'That was breathtakingly easy! Victor, you are Great'
@@ -170,10 +177,10 @@ app.use(function(err, req, res, next){
 
 
 
-let port = process.env.PORT;
-if(port == null || port == ""){
-  port = 5000;
-}
+// let port = process.env.PORT;
+// if(port == null || port == ""){
+//   port = 5000;
+// }
 
 app.listen(port, function() {
   console.log("5000: Server started on port successfully.");

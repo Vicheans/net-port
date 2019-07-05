@@ -54,18 +54,17 @@ console.log(name + "  " + email + " " + message);
 ///////////////////////////////////////
 var transporter = nodemailer.createTransport({
   service: 'gmail',
-  auth: {
+ auth: {
     user: 'christianovik009@gmail.com',
     pass: 'Olateju2018'
   }
 })
 
 var mailOptions = {
-  from: 'Olateju Victor Daniel',
-  to: email,
-  subject: 'Thanks for Reaching out',
-  text: 'Thanks For contacting Victor!',
-  html: "<h1>Header here bruh</h1>"
+  from: 'Olateju Victor Daniel :) christianovik009@gmail.com',
+  to: 'VictorOlateju8@gmail.com',
+  subject: 'We are here again',
+  text: 'That was breathtakingly easy! Victor, you are Great'
 }
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -76,31 +75,31 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 })
 //////////////////////////
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'christianovik009@gmail.com',
-    pass: 'Olateju2018'
-  }
-})
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'christianovik009@gmail.com',
+//     pass: 'Olateju2018'
+//   }
+// })
 
-var mailOptions = {
-  from: 'Olateju Victor Daniel',
-  to: "christianovik009@gmail.com",
-  subject: 'You just recieved an email from ' + name + " with email " + email,
-  text: 'I think you should respond to this urgently',
-  html: "<h1>Header here bruh</h1>"
-}
+// var mailOptions = {
+//   from: 'Olateju Victor Daniel',
+//   to: "christianovik009@gmail.com",
+//   subject: 'You just recieved an email from ' + name + " with email " + email,
+//   text: 'I think you should respond to this urgently',
+//   html: "<h1>Header here bruh</h1>"
+// }
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-})
+// transporter.sendMail(mailOptions, function(error, info){
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Email sent: ' + info.response);
+//   }
+// })
 
-console.log("sent " + name + " to " + to);
+console.log("sent " + name + " to " + email);
 style = "alert-success";
 response = "Your Message has been recieved, do check your email for confirmation";
 res.render("home", {style: style, response: response});

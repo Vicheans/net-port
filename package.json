@@ -7,7 +7,7 @@
   },
   "author": "Olateju Victor Daniel",
   "license": "ISC",
-  "engines":{
+  "engines": {
     "node": "10.15.3"
   },
   "description": "Counter part welcoming eksuth website",

@@ -10,7 +10,7 @@ const router = require("router");
 const Nexmo = require("nexmo");
 var nodemailer = require("nodemailer");
 var smtpTransport = require('nodemailer-smtp-transport');
-
+const serverless = require('serverless-http');
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -175,8 +175,10 @@ if(port == null || port == ""){
   port = 5000;
 }
 
+module.exports = app;
+module.exports.handler = serverless(app)
 
-app.listen(port, function() {
-  console.log("5000: Server started on port successfully.");
-});
+//app.listen(port, function() {
+ //console.log("5000: Server started on port successfully.");
+//});
 

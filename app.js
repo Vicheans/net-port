@@ -27,7 +27,7 @@ const nexmo = new Nexmo({
 var style = " ";
 var response = " ";
 
-
+app.set('trust proxy', true)
 
 //RENDERING HOME
 app.get("/", function(req, res){
@@ -38,7 +38,14 @@ app.get("/home.php", function(req, res){
 	style = "";
 response = "";
 
+var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+console.log(ip);
+
+console.log("Req.ip " + req.ip + " Req.ips "+ req.ips)
+
 	res.render("home", {style: style, response: response});
+
+
 });
 
 app.get("/home.php", function(req, res){
@@ -113,65 +120,13 @@ transported.sendMail(mailOption, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 })
-//////////////////////////
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'christianovik009@gmail.com',
-//     pass: 'Olateju2018'
-//   }
-// })
 
-// var mailOptions = {
-//   from: 'Olateju Victor Daniel',
-//   to: "christianovik009@gmail.com",
-//   subject: 'You just recieved an email from ' + name + " with email " + email,
-//   text: 'I think you should respond to this urgently',
-//   html: "<h1>Header here bruh</h1>"
-// }
-
-// transporter.sendMail(mailOptions, function(error, info){
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// })
 
 console.log("sent " + name + " to " + email);
 style = "alert-success";
 response = "Your Message has been recieved, do check your email for confirmation";
 res.render("home", {style: style, response: response});
 })
-
-
-
-
-
-app.get("/about.php", function(req, res){
-	res.sendFile(__dirname + "/views/about.html");
-});
-
-app.get("/services.php", function(req, res){
-	//console.log(req.ipInfo);
-	res.render("expired")
-});
-
-app.get("/news.php", function(req, res){
-	res.sendFile(__dirname + "/views/news.html");
-});
-
-app.get("/contact.php", function(req, res){
-	res.sendFile(__dirname + "/views/contact.html");
-});
-
-app.get("/admin.php", function(req, res){
-	res.sendFile(__dirname + "/views/login.html");
-});
-
-app.get("/database.php", function(req, res){
-	res.sendFile(__dirname + "/views/panel.html");
-});
 
 //RENDERING REGISTER
 app.get("/register", function(req, res){
